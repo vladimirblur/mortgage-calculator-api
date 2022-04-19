@@ -1,7 +1,7 @@
 const express = require("express");
 const { validation, controllerWrapper } = require("../../middlewares");
 const { joiAddSchema, joiUpdateSchema } = require("../../models/bank");
-const { banks } = require("../../controllers");
+const { banks } = require("../../Controllers");
 
 const router = express.Router();
 

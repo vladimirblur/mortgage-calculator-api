@@ -10,7 +10,13 @@ const getBankById = async (req, res) => {
     throw new NotFound(`Contact with id=${bankId} not found`);
   }
 
-  res.json(bank);
+  res.json({
+    status: "success",
+    code: 200,
+    data: {
+      result: bank,
+    },
+  });
 };
 
 module.exports = getBankById;

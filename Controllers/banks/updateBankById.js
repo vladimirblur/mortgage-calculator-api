@@ -11,7 +11,13 @@ const updateBankById = async (req, res) => {
     throw new NotFound(`Bank with id=${bankId} not found`);
   }
 
-  res.status(200).json(result);
+  res.json({
+    status: "success",
+    code: 200,
+    data: {
+      result,
+    },
+  });
 };
 
 module.exports = updateBankById;

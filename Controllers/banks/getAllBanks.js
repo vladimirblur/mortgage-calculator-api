@@ -18,13 +18,7 @@ const getAllBanks = async (req, res) => {
     limit: Number(limit),
   });
 
-  res.json({
-    status: "success",
-    code: 200,
-    data: {
-      result: banks,
-    },
-  });
+  res.status(200).json(banks);
 };
 
 module.exports = getAllBanks;
